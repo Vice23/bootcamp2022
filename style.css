@@ -11,3 +11,25 @@ body {
     background-color: #badA55;
     color: black;
 }
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+ul {
+    /* basic gallery styling */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* remove default list styling */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /* basic gallery styling */
+    flex-basis: 32%;
+    margin-bottom: 20px;
+}
