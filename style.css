@@ -32,4 +32,37 @@ li {
     /* basic gallery styling */
     flex-basis: 32%;
     margin-bottom: 20px;
+    /* positioning the images & figcaptions (1/2) so the gallery doesn't 'jump around' */
+    position: relative;
+}
+
+figcaption {
+    /* hiding the figcaption */
+    height: 0;
+    overflow: hidden;
+    /* positioning it (2/2) so the gallery doesn't 'jump around' */
+    position: absolute;
+    /* positioning the figcaption within the gallery */
+    top: 70%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(154, 104, 29, 0.72);
+    color: #fff;
+}
+
+li:hover figcaption {
+    height: auto;
+    padding: 10px 0;
+}
+
+/* The focus state is available on elements when a user tabs to elements, using the tab key. Typically, the default focus state is a blue outline (as seen on Chrome) or dotted black outline around the element in focus (as seen on Firefox): */
+li:focus figcaption {
+    visibility: visible;
+}
+
+/* The focus state is available on elements when a user tabs to elements, using the tab key. Typically, the default focus state is a blue outline (as seen on Chrome) or dotted black outline around the element in focus (as seen on Firefox): */
+a:focus {
+    outline: 1px solid red;
+    color: purple;
 }
